@@ -33,8 +33,8 @@ namespace WarCardGame
     }
     public class Card
     {
-        public int suit;    // numerical representation of the suit of the card
-        public int value;   // numerical representation of the value of the card
+        int suit;    // numerical representation of the suit of the card
+        int value;   // numerical representation of the value of the card
 
         public Card(int s, int v)
         {
@@ -106,7 +106,7 @@ namespace WarCardGame
     public class Deck
     {
         Card[] theDeck = new Card[52];  // create an array of 52 cards for the deck
-        public int numberOfCards;   // the total number of cards in deck
+        int numberOfCards;   // the total number of cards in deck
 
         public Deck()
         {
@@ -315,7 +315,7 @@ namespace WarCardGame
             player2.ReplaceCurrentPile();
 
             // the game will continue for 100 rounds or until a player runs out of cards
-            for (int round = 1; round <= 10; round++)
+            for (int round = 1; round <= 100; round++)
             {
                 // check if players have at least 1 card each
                 if (!HasEnoughCards(1))
